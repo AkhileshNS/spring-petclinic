@@ -8,7 +8,9 @@ pipeline {
       }
     }
     stage('Build') {
-      sh "./mvnw package"
+      steps {
+        sh "./mvnw package"
+      }
     }
     stage('Transfer Build') {
       steps {
